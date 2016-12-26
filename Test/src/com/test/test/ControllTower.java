@@ -4,7 +4,6 @@ public class ControllTower implements InMediator  {
 
 	private boolean InUse = false;
 	
-	@Override
 	public synchronized boolean getPermission() {
 		// TODO Auto-generated method stub
 		
@@ -16,7 +15,6 @@ public class ControllTower implements InMediator  {
 		}
 	}
 
-	@Override
 	public void land(IAirplane airplane) throws InterruptedException {
 		// TODO Auto-generated method stub
 		

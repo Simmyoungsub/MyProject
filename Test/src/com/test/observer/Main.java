@@ -8,7 +8,7 @@ public class Main {
 		AnnualSubScriber as = new AnnualSubScriber(publisher);
 		ColdSubScriber cs = new ColdSubScriber(publisher);
 		
-		publisher.notifyObserver();
+		publisher.changeValue("Today", "Hello everyone");
 	}
-
+	
 }

@@ -4,16 +4,14 @@ public class MediatorTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		A a = new A();
-        B b = new B();
-        C c = new C();
-
-        Mediator m = new Mediator();
-        m.addColleague(a);
-        m.addColleague(b);
-        m.addColleague(c);
-
-        //m.sendEvent("B", "Hello");
+		
+		Mediator m = new Mediator();
+		
+		A a = new A(m);
+        B b = new B(m);
+        C c = new C(m);
+        
+        //a에게 action을 취한다.
         a.fireEvent("ReceiveMail");
 	}
 

@@ -1,8 +1,13 @@
 package com.test.mediator;
 
 public class B extends Colleague {
-
-String name = "B";
+	private IMediator mediator;
+	private String name = "B";
+	
+	public B(IMediator mediator){
+		this.mediator = mediator;
+		mediator.addColleague(this);
+	}
 	
 	@Override
 	public void fireEvent(String event) {
@@ -13,7 +18,8 @@ String name = "B";
 	@Override
 	public void receiveEvent(String name, String event) {
 		// TODO Auto-generated method stub
-		System.out.println("Receive event from " + name);
+		System.out.println("B : Receive event from " + name);
+		System.out.println("Event : " + event);
 	}
 
 	@Override
